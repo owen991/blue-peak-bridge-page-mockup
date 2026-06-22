@@ -9,7 +9,7 @@
   :root{
     --navy:#1B3A5F; --navy-deep:#14304E; --teal:#2E6C8E; --teal-deep:#104A5C;
     --bg:#F4F7FA; --card:#FFFFFF; --line:#E2E9F0; --band:#EAF0F6;
-    --text:#27303A; --muted:#69757F; --gold:#C9A24B;
+    --text:#27303A; --muted:#69757F; --gold:#C9A24B; --amber:#9A6A00;
     --shadow:0 1px 2px rgba(20,48,78,.04), 0 8px 28px rgba(20,48,78,.07);
     --radius:14px;
   }
@@ -35,19 +35,16 @@
   .brand span.loc{color:#8FA8C0; font-size:12.5px; margin-left:4px; border-left:1px solid #3A5775; padding-left:10px}
 
   .hero{padding:46px 0 8px; text-align:center}
-  .eyebrow{color:var(--teal); font-weight:600; font-size:13px; letter-spacing:.8px;
-    text-transform:uppercase; margin-bottom:14px}
+  .eyebrow{color:var(--teal); font-weight:600; font-size:13px; letter-spacing:.8px; text-transform:uppercase; margin-bottom:14px}
   .hero h1{font-size:33px; line-height:1.2; margin:0 0 14px; color:var(--navy); font-weight:700; letter-spacing:-.4px}
   .hero p.sub{font-size:17px; color:var(--muted); margin:0 auto; max-width:580px}
   .delivered{display:inline-flex; align-items:center; gap:8px; margin-top:22px;
-    background:#EAF3EC; color:#2E6B43; border:1px solid #CDE6D4; padding:8px 15px;
-    border-radius:999px; font-size:13.5px; font-weight:500}
+    background:#EAF3EC; color:#2E6B43; border:1px solid #CDE6D4; padding:8px 15px; border-radius:999px; font-size:13.5px; font-weight:500}
   .delivered .dot{width:7px; height:7px; border-radius:50%; background:#3E9D5D; flex:none}
 
   .band{padding:34px 0 8px}
   .grid{display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start}
-  .panel{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-    box-shadow:var(--shadow); overflow:hidden}
+  .panel{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
   .panel-pad{padding:22px}
   .panel h3{margin:0 0 4px; font-size:13px; letter-spacing:.6px; text-transform:uppercase; color:var(--teal)}
 
@@ -55,15 +52,13 @@
      background:radial-gradient(120% 90% at 30% 20%, #2C5378 0%, #1B3A5F 55%, #14304E 100%);
      display:flex; align-items:center; justify-content:center}
   .video .ring{width:74px; height:74px; border-radius:50%; background:rgba(255,255,255,.14);
-    display:flex; align-items:center; justify-content:center; border:1px solid rgba(255,255,255,.35);
-    transition:transform .15s, background .15s}
+    display:flex; align-items:center; justify-content:center; border:1px solid rgba(255,255,255,.35); transition:transform .15s, background .15s}
   .video:hover .ring{transform:scale(1.06); background:rgba(255,255,255,.22)}
   .video .ring:after{content:""; width:0;height:0; margin-left:5px;
     border-left:20px solid #fff; border-top:13px solid transparent; border-bottom:13px solid transparent}
   .video .rep{position:absolute; left:16px; bottom:14px; display:flex; align-items:center; gap:10px; color:#fff}
   .video .avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(150deg,#6FA0C3,#37648A);
-    display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;color:#fff;
-    border:2px solid rgba(255,255,255,.6); flex:none}
+    display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;color:#fff; border:2px solid rgba(255,255,255,.6); flex:none}
   .video .rep b{font-size:14px; font-weight:600; display:block}
   .video .rep span{font-size:11.5px; color:#C3D4E3}
   .video .len{position:absolute; right:14px; bottom:14px; background:rgba(0,0,0,.42); color:#fff;
@@ -81,8 +76,7 @@
   .day.sel .dow{color:#B7CBDD}
   .day .num{font-size:19px; font-weight:600; margin-top:2px}
   .slots{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:6px}
-  .slot{border:1px solid var(--line); border-radius:9px; padding:9px 4px; text-align:center;
-    font-size:13.5px; font-weight:500; cursor:pointer; transition:.12s; color:var(--navy)}
+  .slot{border:1px solid var(--line); border-radius:9px; padding:9px 4px; text-align:center; font-size:13.5px; font-weight:500; cursor:pointer; transition:.12s; color:var(--navy)}
   .slot:hover{border-color:var(--teal); background:#F3F8FB}
   .slot.sel{background:var(--teal-deep); border-color:var(--teal-deep); color:#fff}
   .prefill{font-size:12.5px; color:var(--muted); margin:14px 0 0; padding-top:13px; border-top:1px dashed var(--line)}
@@ -92,10 +86,11 @@
   .cta:hover{background:var(--navy-deep)}
   .cta:disabled{background:#C3CCD6; cursor:not-allowed}
   .reassure{font-size:12.5px; color:var(--muted); text-align:center; margin-top:11px}
+  .trustchips{display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-top:16px; padding-top:15px; border-top:1px solid var(--line)}
+  .chip{font-size:12px; font-weight:600; color:var(--teal-deep); background:#EAF3F6; border:1px solid #CFE3EA; padding:5px 11px; border-radius:999px}
   .booked{display:none; text-align:center; padding:30px 8px}
   .booked.show{display:block}
-  .booked .check{width:58px;height:58px;border-radius:50%;background:#EAF3EC;border:1px solid #CDE6D4;
-    margin:0 auto 14px; display:flex;align-items:center;justify-content:center}
+  .booked .check{width:58px;height:58px;border-radius:50%;background:#EAF3EC;border:1px solid #CDE6D4; margin:0 auto 14px; display:flex;align-items:center;justify-content:center}
   .booked .check:after{content:"";width:13px;height:23px;border:solid #3E9D5D;border-width:0 3px 3px 0; transform:rotate(43deg); margin-top:-4px}
   .booked h4{margin:0 0 6px; color:var(--navy); font-size:20px}
   .booked p{margin:4px 0; color:var(--muted); font-size:14.5px}
@@ -110,7 +105,6 @@
   .step b{display:block; font-size:15.5px; margin-bottom:5px; color:var(--text)}
   .step p{margin:0; font-size:13.5px; color:var(--muted)}
 
-  /* the guide, on-page */
   .guide{padding:48px 0 8px}
   .guidehead{text-align:center; margin-bottom:8px}
   .guidehead .eyebrow{display:block}
@@ -119,64 +113,64 @@
   .timeline{margin:30px 0 0; position:relative}
   .tl{display:flex; gap:16px; padding:0 0 4px}
   .tl .col-n{flex:none; width:46px; text-align:center; position:relative}
-  .tl .bub{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;
-    font-size:15px;display:flex;align-items:center;justify-content:center;margin:0 auto; position:relative; z-index:1}
+  .tl .bub{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700; font-size:15px;display:flex;align-items:center;justify-content:center;margin:0 auto; position:relative; z-index:1}
   .tl .line{position:absolute; top:34px; bottom:-14px; left:50%; width:2px; background:var(--line); transform:translateX(-50%)}
   .tl:last-child .line{display:none}
-  .tl .body{flex:1; background:var(--card); border:1px solid var(--line); border-radius:12px;
-    box-shadow:var(--shadow); padding:15px 18px; margin-bottom:14px}
-  .tl .body .t{font-weight:600; font-size:15.5px; color:var(--navy); margin-bottom:3px;
-    display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
-  .tl .body .know{font-size:12px; font-weight:600; color:var(--teal-deep); background:#E9F2F6;
-    border:1px solid #CFE3EA; padding:3px 10px; border-radius:999px; white-space:nowrap}
+  .tl .body{flex:1; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); padding:15px 18px; margin-bottom:14px}
+  .tl .body .t{font-weight:600; font-size:15.5px; color:var(--navy); margin-bottom:3px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+  .tl .body .know{font-size:12px; font-weight:600; color:var(--teal-deep); background:#E9F2F6; border:1px solid #CFE3EA; padding:3px 10px; border-radius:999px; white-space:nowrap}
   .tl .body p{margin:0; font-size:13.7px; color:var(--text)}
-  .warn{margin-top:26px; background:#FBF6EC; border:1px solid #ECDFC2; border-left:3px solid var(--gold);
-    border-radius:12px; padding:20px 22px}
+  .warn{margin-top:26px; background:#FBF6EC; border:1px solid #ECDFC2; border-left:3px solid var(--gold); border-radius:12px; padding:20px 22px}
   .warn b{color:var(--navy)}
   .warn h4{margin:0 0 7px; color:var(--navy); font-size:16px}
   .warn p{margin:0; font-size:14px; color:var(--text)}
-  .donow{margin-top:18px; background:var(--card); border:1px solid var(--line); border-radius:12px;
-    box-shadow:var(--shadow); padding:22px 24px}
+  .donow{margin-top:18px; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); padding:22px 24px}
   .donow h4{margin:0 0 12px; color:var(--navy); font-size:16px}
   .donow ul{margin:0; padding:0; list-style:none}
   .donow li{display:flex; gap:11px; padding:8px 0; font-size:14px; border-top:1px solid var(--line)}
   .donow li:first-child{border-top:0}
   .donow li .ck{color:#3E9D5D; font-weight:700; flex:none}
 
-  /* mid CTA */
-  .midcta{margin:34px auto 0; max-width:760px; text-align:center; background:var(--navy);
-    border-radius:var(--radius); padding:30px 26px; color:#fff; box-shadow:var(--shadow)}
+  .midcta{margin:34px auto 0; max-width:760px; text-align:center; background:var(--navy); border-radius:var(--radius); padding:30px 26px; color:#fff; box-shadow:var(--shadow)}
   .midcta h3{margin:0 0 8px; font-size:21px}
   .midcta p{margin:0 0 18px; color:#C3D4E3; font-size:14.5px}
-  .midcta a{display:inline-block; background:#fff; color:var(--navy); font-weight:600; font-size:15px;
-    padding:13px 26px; border-radius:11px; text-decoration:none; transition:.15s}
+  .midcta a{display:inline-block; background:#fff; color:var(--navy); font-weight:600; font-size:15px; padding:13px 26px; border-radius:11px; text-decoration:none; transition:.15s}
   .midcta a:hover{background:#EAF0F6}
 
-  /* testimonials carousel */
+  /* FAQ */
+  .faq{padding:46px 0 8px}
+  .faq h2{text-align:center; font-size:23px; color:var(--navy); margin:0 0 22px; letter-spacing:-.2px}
+  .faq details{background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); margin-bottom:12px; overflow:hidden}
+  .faq summary{list-style:none; cursor:pointer; padding:16px 20px; font-weight:600; font-size:15.5px; color:var(--navy);
+    display:flex; justify-content:space-between; align-items:center; gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .pm{flex:none; width:22px;height:22px;border-radius:50%;background:var(--band);color:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-size:16px; transition:.15s}
+  .faq details[open] summary .pm{transform:rotate(45deg)}
+  .faq .ans{padding:0 20px 18px; font-size:14px; color:var(--text); line-height:1.6}
+
   .trust{padding:48px 0 10px}
-  .tlabel{text-align:center; margin-bottom:18px}
-  .carousel{position:relative; background:var(--navy); border-radius:var(--radius); padding:34px 56px;
-    color:#fff; box-shadow:var(--shadow); overflow:hidden}
+  .tlabel{text-align:center; margin-bottom:14px}
+  .phflag{display:inline-block; margin:8px auto 0; background:#FBF3E2; color:var(--amber); border:1px solid #ECD9AE;
+    font-size:12px; font-weight:600; padding:5px 12px; border-radius:999px}
+  .carousel{position:relative; background:var(--navy); border-radius:var(--radius); padding:34px 56px; color:#fff; box-shadow:var(--shadow); overflow:hidden}
   .tslide{display:none; animation:fade .35s ease}
   .tslide.on{display:block}
   @keyframes fade{from{opacity:0; transform:translateY(6px)}to{opacity:1; transform:none}}
   .carousel .stars{color:var(--gold); letter-spacing:3px; font-size:15px; margin-bottom:12px}
   .carousel blockquote{margin:0; font-size:18px; line-height:1.5; font-weight:400; min-height:108px}
   .carousel .who{margin-top:16px; display:flex; align-items:center; gap:11px}
-  .carousel .who .av{width:38px;height:38px;border-radius:50%;background:#37648A;flex:none;
-    display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px; border:2px solid rgba(255,255,255,.4)}
+  .carousel .who .av{width:38px;height:38px;border-radius:50%;background:#37648A;flex:none; display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px; border:2px solid rgba(255,255,255,.4)}
   .carousel .who b{font-size:14px; font-weight:600}
   .carousel .who span{font-size:12.5px; color:#A9BFD3; display:block}
   .nav{position:absolute; top:50%; transform:translateY(-50%); width:34px;height:34px;border-radius:50%;
-    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); color:#fff; cursor:pointer;
-    display:flex;align-items:center;justify-content:center; font-size:17px; transition:.12s}
+    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); color:#fff; cursor:pointer; display:flex;align-items:center;justify-content:center; font-size:17px; transition:.12s}
   .nav:hover{background:rgba(255,255,255,.22)}
   .nav.prev{left:12px} .nav.next{right:12px}
   .dots{display:flex; gap:8px; justify-content:center; margin-top:18px}
   .dot{width:8px;height:8px;border-radius:50%;background:#C3CCD6;cursor:pointer;transition:.12s}
   .dot.on{background:var(--navy); transform:scale(1.25)}
-  .why{background:#F0F4F8; border:1px solid var(--line); border-left:3px solid var(--teal);
-    border-radius:10px; padding:18px 20px; margin-top:18px; font-size:14px; color:var(--text)}
+  .why{background:#F0F4F8; border:1px solid var(--line); border-left:3px solid var(--teal); border-radius:10px; padding:18px 20px; margin-top:18px; font-size:14px; color:var(--text)}
   .why b{color:var(--navy)}
   .disc{text-align:center; font-size:12.5px; color:var(--muted); margin-top:22px}
 
@@ -207,7 +201,6 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="narrow">
     <div class="eyebrow">Your Guide Is Ready</div>
@@ -217,7 +210,6 @@
   </div>
 </section>
 
-<!-- VIDEO + CALENDAR -->
 <section class="band">
   <div class="wrap">
     <div class="grid">
@@ -228,7 +220,7 @@
             <div class="avatar">T</div>
             <div><b>Teagan, Founder</b><span>Blue Peak Solutions</span></div>
           </div>
-          <div class="len">1:20</div>
+          <div class="len">0:55</div>
         </div>
         <div class="vcap">A quick note — <b>what’s actually happening, and what a call with us looks like</b>.</div>
       </div>
@@ -247,14 +239,19 @@
           <div class="check"></div>
           <h4>You’re on the calendar</h4>
           <p class="when" id="bookedWhen">—</p>
-          <p>We’ll call you from a local South Carolina number.<br>A reminder text goes out 1 hour and 10 minutes before.</p>
+          <p>We’ll call you from a local South Carolina (864) number.<br>A reminder text goes out 1 hour and 10 minutes before.</p>
+        </div>
+        <div class="trustchips">
+          <span class="chip">✓ No upfront fees</span>
+          <span class="chip">✓ Free, no obligation</span>
+          <span class="chip">✓ South Carolina focused</span>
+          <span class="chip">✓ We never sell your data</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT HAPPENS NEXT -->
 <section class="next">
   <div class="wrap">
     <h2>What the call actually looks like</h2>
@@ -269,7 +266,6 @@
   </div>
 </section>
 
-<!-- THE GUIDE, ON PAGE (real content) -->
 <section class="guide">
   <div class="narrow">
     <div class="guidehead">
@@ -282,31 +278,24 @@
       <div class="tl"><div class="col-n"><div class="bub">1</div><div class="line"></div></div>
         <div class="body"><div class="t">You fall behind <span class="know">Act immediately</span></div>
         <p>The lender starts sending notices. They’re easy to set aside — and that’s exactly the trap.</p></div></div>
-
       <div class="tl"><div class="col-n"><div class="bub">2</div><div class="line"></div></div>
         <div class="body"><div class="t">The lawsuit <span class="know">Faster than you think</span></div>
         <p>The lender files a Lis Pendens, Summons, and Complaint in the County Court of Common Pleas.</p></div></div>
-
       <div class="tl"><div class="col-n"><div class="bub">3</div><div class="line"></div></div>
         <div class="body"><div class="t">You must answer <span class="know">Only 30 days</span></div>
         <p>Once you’re served, you have a hard, short window to file a written Answer. Miss it and you lose your right to be heard.</p></div></div>
-
       <div class="tl"><div class="col-n"><div class="bub">4</div><div class="line"></div></div>
         <div class="body"><div class="t">Loss-mitigation review <span class="know">A short window</span></div>
         <p>Owner-occupants get a short window to be reviewed for options. It does <b>not</b> pause your 30-day answer deadline.</p></div></div>
-
       <div class="tl"><div class="col-n"><div class="bub">5</div><div class="line"></div></div>
         <div class="body"><div class="t">The judge <span class="know">Moves quickly</span></div>
         <p>A Master-in-Equity — a judge for these cases — hears it and can enter judgment quickly.</p></div></div>
-
       <div class="tl"><div class="col-n"><div class="bub">6</div><div class="line"></div></div>
         <div class="body"><div class="t">Judgment & order of sale <span class="know">~30 days</span></div>
         <p>The court sets the amount owed and orders your home sold.</p></div></div>
-
       <div class="tl"><div class="col-n"><div class="bub">7</div><div class="line"></div></div>
         <div class="body"><div class="t">Notice of sale <span class="know">~3 weeks’ notice</span></div>
         <p>The sale is advertised in the local paper — often only about three weeks out.</p></div></div>
-
       <div class="tl"><div class="col-n"><div class="bub">8</div></div>
         <div class="body"><div class="t">The auction <span class="know">Sooner than expected</span></div>
         <p>Your home is sold to the highest bidder at the county courthouse on the first Monday of the month.</p></div></div>
@@ -329,15 +318,33 @@
     <div class="midcta">
       <h3>Want a straight read on where you stand?</h3>
       <p>We’ll confirm your real timeline and walk your options — free, no pressure.</p>
-      <a href="#calTop">Pick a time to talk →</a>
+      <a href="#calTop">Get my free read →</a>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS CAROUSEL -->
+<!-- FAQ (from the Help Pack — real, approved answers) -->
+<section class="faq">
+  <div class="narrow">
+    <h2>Questions people ask first</h2>
+    <details open><summary>Is it too late if there’s already a sale date?<span class="pm">+</span></summary>
+      <div class="ans">Usually not. Right up until the sale actually happens, there are often still moves available — but they get fewer and harder the closer you get. That’s exactly why confirming your real date matters.</div></details>
+    <details><summary>Will I walk away with any money?<span class="pm">+</span></summary>
+      <div class="ans">It depends on your equity. If there’s equity in the home, the goal is to get it into your pocket instead of losing it at the auction.</div></details>
+    <details><summary>Does foreclosure ruin my credit forever?<span class="pm">+</span></summary>
+      <div class="ans">A foreclosure can stay on your credit report for 7 to 10 years. Resolving it on your own terms is far better for your credit than letting it run all the way to auction.</div></details>
+    <details><summary>Do I have to pay anything to talk to you?<span class="pm">+</span></summary>
+      <div class="ans">No. The conversation is free and there’s no obligation. We never charge an upfront fee, and we never sell your information.</div></details>
+  </div>
+</section>
+
+<!-- TESTIMONIALS (PLACEHOLDER — real stories pending permission / no reviews yet) -->
 <section class="trust">
   <div class="narrow">
-    <div class="tlabel"><span class="eyebrow">Real Outcomes</span></div>
+    <div class="tlabel">
+      <span class="eyebrow">Real Outcomes</span>
+      <div><span class="phflag">⚠ Placeholder — pending client permission &amp; real Google reviews</span></div>
+    </div>
     <div class="carousel">
       <button class="nav prev" onclick="move(-1)">‹</button>
       <button class="nav next" onclick="move(1)">›</button>
@@ -347,24 +354,21 @@
         <blockquote>“A Greenville family had an estate with six heirs spread all over, plus a judgment and a state tax lien on the property. Blue Peak coordinated every one of them, handled the probate and the liens, and got the whole family paid — instead of letting it go to auction.”</blockquote>
         <div class="who"><div class="av">KF</div><div><b>The King Family</b><span>Greenville County, SC</span></div></div>
       </div>
-
       <div class="tslide">
         <div class="stars">★★★★★</div>
         <blockquote>“She was only 25, had lost both her parents young, and didn’t have much family. Blue Peak started the probate, covered all the upfront costs, stopped the auction, and got money in her pocket — even helped her find a place to land.”</blockquote>
         <div class="who"><div class="av">N</div><div><b>Nicole</b><span>Estate &amp; foreclosure case</span></div></div>
       </div>
-
       <div class="tslide">
         <div class="stars">★★★★★</div>
         <blockquote>“He’d been out of state when the mortgage fell behind. Blue Peak stepped in, walked him through probate, and got him paid so he could cover his costs and move forward — without losing the property at the courthouse.”</blockquote>
         <div class="who"><div class="av">JG</div><div><b>James G.</b><span>Out-of-state heir</span></div></div>
       </div>
-
       <div class="dots" id="dots"></div>
     </div>
 
     <div class="why"><b>Why do we offer this for free?</b> Because if selling turns out to be your best option, we hope you’ll consider us. And if keeping the house is your best option, we’ll tell you exactly how to do it.</div>
-    <p class="disc">Blue Peak Solutions is a local real-estate problem-solving company — not a law firm. We purchase interest in distressed and foreclosure properties, and help South Carolina homeowners understand their options.</p>
+    <p class="disc">Blue Peak Solutions is a real-estate problem-solving company — not a law firm. Buying interest in distressed and foreclosure properties is all we do, and South Carolina is our focus.</p>
   </div>
 </section>
 
@@ -372,7 +376,7 @@
   <div class="wrap">
     <div class="row"><span>Blue Peak Solutions · South Carolina</span><a href="#">Call (864) •••-4421</a><a href="#">Privacy</a></div>
     <div>© Blue Peak Solutions. This page was prepared for you and isn’t indexed publicly.</div>
-    <div class="mocknote">— Preview mockup · placeholder logo, founder video &amp; outcome stories are illustrative · not a live page —</div>
+    <div class="mocknote">— Preview mockup · placeholder logo &amp; founder video; outcome stories are flagged placeholders pending permission/reviews · not a live page —</div>
   </div>
 </footer>
 
@@ -418,11 +422,10 @@
     if(el.dataset.played) return; el.dataset.played=1;
     el.querySelector('.ring').style.opacity=.35;
     const note=document.createElement('div');
-    note.style.cssText='position:absolute;color:#fff;font-size:13.5px;background:rgba(0,0,0,.4);padding:8px 14px;border-radius:8px;';
-    note.textContent='▶ Founder video plays here (80-sec placeholder)';
+    note.style.cssText='position:absolute;color:#fff;font-size:13.5px;background:rgba(0,0,0,.4);padding:8px 14px;border-radius:8px;text-align:center;';
+    note.textContent='▶ Founder video plays here (55-sec placeholder · captions burned in)';
     el.appendChild(note);
   }
-  // carousel
   const slides=[...document.querySelectorAll('.tslide')]; let cur=0;
   const dotsEl=document.getElementById('dots');
   slides.forEach((_,i)=>{ const b=document.createElement('div'); b.className='dot'+(i?'':' on');

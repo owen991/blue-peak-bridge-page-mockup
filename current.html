@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Bridge Page — CURRENT (A) · Blue Peak Ventures</title>
+<style>
+  :root{
+    --navy:#1B3A5F; --navy-deep:#14304E; --teal:#2E6C8E; --teal-deep:#104A5C;
+    --bg:#F4F7FA; --card:#FFFFFF; --line:#E2E9F0; --band:#EAF0F6;
+    --text:#27303A; --muted:#69757F; --gold:#C9A24B;
+    --shadow:0 1px 2px rgba(20,48,78,.04), 0 8px 28px rgba(20,48,78,.07);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 20px}
+  .narrow{max-width:760px; margin:0 auto; padding:0 20px}
+
+  header.topbar{background:var(--navy); padding:14px 0}
+  .brand{display:flex; align-items:center; gap:11px; color:#fff}
+  .brand b{font-weight:600; letter-spacing:.2px; font-size:16px}
+  .brand .sol{font-weight:400; color:#AFC4D8}
+  .brand span.loc{color:#8FA8C0; font-size:12.5px; margin-left:4px; border-left:1px solid #3A5775; padding-left:10px}
+
+  .hero{padding:46px 0 8px; text-align:center}
+  .eyebrow{color:var(--teal); font-weight:600; font-size:13px; letter-spacing:.8px; text-transform:uppercase; margin-bottom:14px}
+  .hero h1{font-size:33px; line-height:1.2; margin:0 0 14px; color:var(--navy); font-weight:700; letter-spacing:-.4px}
+  .hero p.sub{font-size:17px; color:var(--muted); margin:0 auto; max-width:580px}
+  .delivered{display:inline-flex; align-items:center; gap:8px; margin-top:22px; background:#EAF3EC; color:#2E6B43; border:1px solid #CDE6D4; padding:8px 15px; border-radius:999px; font-size:13.5px; font-weight:500}
+  .delivered .dot{width:7px; height:7px; border-radius:50%; background:#3E9D5D; flex:none}
+
+  .band{padding:34px 0 8px}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start}
+  .panel{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
+  .panel-pad{padding:22px}
+  .vcap{padding:13px 18px; font-size:13.5px; color:var(--muted); border-top:1px solid var(--line)}
+  .vcap b{color:var(--text); font-weight:600}
+
+  .cal h3{margin:0 0 4px; font-size:13px; letter-spacing:.6px; text-transform:uppercase; color:var(--teal)}
+  .cal .lead{font-size:15px; color:var(--text); margin:6px 0 16px; font-weight:600}
+  .reassure{font-size:12.5px; color:var(--muted); text-align:center; margin-top:13px}
+  .trustchips{display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-top:16px; padding-top:15px; border-top:1px solid var(--line)}
+  .chip{font-size:12px; font-weight:600; color:var(--teal-deep); background:#EAF3F6; border:1px solid #CFE3EA; padding:5px 11px; border-radius:999px}
+  .calbox{border-radius:11px}
+  .calbtn{display:flex; align-items:center; justify-content:center; gap:10px; cursor:pointer; list-style:none; background:var(--navy); color:#fff; font-weight:600; font-size:15.5px; padding:14px; border-radius:11px; transition:.15s}
+  .calbtn:hover{background:var(--navy-deep)}
+  .calbtn::-webkit-details-marker{display:none}
+  .calbtn .cpm{display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:rgba(255,255,255,.18); font-size:16px; transition:.15s}
+  details[open] .calbtn{border-radius:11px 11px 0 0}
+  details[open] .calbtn .cpm{transform:rotate(45deg)}
+  .calwrap{border:1px solid var(--line); border-top:none; border-radius:0 0 11px 11px; overflow:hidden}
+
+  .next{padding:40px 0 8px}
+  .next h2{text-align:center; font-size:23px; color:var(--navy); margin:0 0 26px}
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+  .step{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px 20px; box-shadow:var(--shadow)}
+  .step .n{width:30px;height:30px;border-radius:8px;background:var(--band);color:var(--navy); font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:12px}
+  .step b{display:block; font-size:15.5px; margin-bottom:5px; color:var(--text)}
+  .step p{margin:0; font-size:13.5px; color:var(--muted)}
+
+  .guide{padding:48px 0 8px}
+  .guidehead{text-align:center; margin-bottom:8px}
+  .guidehead h2{font-size:25px; color:var(--navy); margin:0 0 8px}
+  .guidehead p{color:var(--muted); font-size:15px; max-width:640px; margin:0 auto}
+  .timeline{margin:30px 0 0}
+  .tl{display:flex; gap:16px; padding:0 0 4px}
+  .tl .col-n{flex:none; width:46px; text-align:center; position:relative}
+  .tl .bub{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700; font-size:15px;display:flex;align-items:center;justify-content:center;margin:0 auto; position:relative; z-index:1}
+  .tl .line{position:absolute; top:34px; bottom:-14px; left:50%; width:2px; background:var(--line); transform:translateX(-50%)}
+  .tl:last-child .line{display:none}
+  .tl .body{flex:1; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); padding:15px 18px; margin-bottom:14px}
+  .tl .body .t{font-weight:600; font-size:15.5px; color:var(--navy); margin-bottom:3px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+  .tl .body .know{font-size:12px; font-weight:600; color:var(--teal-deep); background:#E9F2F6; border:1px solid #CFE3EA; padding:3px 10px; border-radius:999px; white-space:nowrap}
+  .tl .body p{margin:0; font-size:13.7px; color:var(--text)}
+  .warn{margin-top:26px; background:#FBF6EC; border:1px solid #ECDFC2; border-left:3px solid var(--gold); border-radius:12px; padding:20px 22px}
+  .warn b{color:var(--navy)} .warn h4{margin:0 0 7px; color:var(--navy); font-size:16px} .warn p{margin:0; font-size:14px; color:var(--text)}
+  .donow{margin-top:18px; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); padding:22px 24px}
+  .donow h4{margin:0 0 12px; color:var(--navy); font-size:16px}
+  .donow ul{margin:0; padding:0; list-style:none}
+  .donow li{display:flex; gap:11px; padding:8px 0; font-size:14px; border-top:1px solid var(--line)} .donow li:first-child{border-top:0}
+  .donow li .ck{color:#3E9D5D; font-weight:700; flex:none}
+
+  .midcta{margin:34px auto 0; max-width:760px; text-align:center; background:var(--navy); border-radius:var(--radius); padding:30px 26px; color:#fff; box-shadow:var(--shadow)}
+  .midcta h3{margin:0 0 8px; font-size:21px} .midcta p{margin:0 0 18px; color:#C3D4E3; font-size:14.5px}
+  .midcta a{display:inline-block; background:#fff; color:var(--navy); font-weight:600; font-size:15px; padding:13px 26px; border-radius:11px; text-decoration:none}
+  .midcta a:hover{background:#EAF0F6}
+
+  .faq{padding:46px 0 8px}
+  .faq h2{text-align:center; font-size:23px; color:var(--navy); margin:0 0 22px}
+  .faq details{background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); margin-bottom:12px; overflow:hidden}
+  .faq summary{list-style:none; cursor:pointer; padding:16px 20px; font-weight:600; font-size:15.5px; color:var(--navy); display:flex; justify-content:space-between; align-items:center; gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .pm{flex:none; width:22px;height:22px;border-radius:50%;background:var(--band);color:var(--navy); display:flex;align-items:center;justify-content:center;font-size:16px; transition:.15s}
+  .faq details[open] summary .pm{transform:rotate(45deg)}
+  .faq .ans{padding:0 20px 18px; font-size:14px; color:var(--text); line-height:1.6}
+
+  .trust{padding:44px 0 10px}
+  .why{background:#F0F4F8; border:1px solid var(--line); border-left:3px solid var(--teal); border-radius:10px; padding:18px 20px; font-size:14px; color:var(--text)} .why b{color:var(--navy)}
+  .disc{text-align:center; font-size:12.5px; color:var(--muted); margin-top:22px}
+
+  footer{margin-top:42px; background:var(--navy-deep); color:#9DB4CA; padding:26px 0; text-align:center; font-size:12.5px}
+  footer .row{color:#C3D4E3}
+
+  @media(max-width:780px){
+    .grid{grid-template-columns:1fr} .steps{grid-template-columns:1fr} .hero h1{font-size:27px}
+    .tl .body .t{flex-direction:column; align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+<div style="background:#7a1f1f;color:#fff;text-align:center;font:600 12px/1.4 -apple-system,Arial;padding:6px">PREVIEW A — CURRENT PAGE (as-is)</div>
+
+<header class="topbar"><div class="wrap"><div class="brand">
+  <svg width="32" height="32" viewBox="0 0 100 100" style="flex:none" aria-hidden="true"><rect width="100" height="100" rx="20" fill="#1a2b4a"/><path d="M30 70V30l20 15v25M50 45l20-15v40" stroke="#0ea5e9" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+  <div><b>Blue Peak <span class="sol">Ventures</span></b> <span class="loc">SC Foreclosure Specialists</span></div>
+</div></div></header>
+
+<section class="hero"><div class="narrow">
+  <div class="eyebrow">Your Guide Is Ready</div>
+  <h1>The South Carolina Foreclosure Timeline</h1>
+  <p class="sub">Exactly what happens, and when, once a foreclosure is filed in South Carolina — so you know how much time you really have and where you stand.</p>
+  <div class="delivered"><span class="dot"></span> Your full timeline is right below — nothing to download</div>
+</div></section>
+
+<section class="band"><div class="wrap"><div class="grid">
+
+  <div class="panel">
+    <div style="position:relative;aspect-ratio:16/9;background:#14304E">
+      <iframe src="https://app.heygen.com/embeds/6c6fe07e1f1141dc98ba5e3d02286ab4" title="HeyGen video player" frameborder="0" allow="encrypted-media; fullscreen;" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+    </div>
+    <div class="vcap">A quick note — <b>what&rsquo;s actually happening, and what a call with us looks like</b>.</div>
+  </div>
+
+  <div class="panel panel-pad cal" id="calTop">
+    <h3>Free 15-Minute Timeline Audit</h3>
+    <p class="lead">Grab a time and we&rsquo;ll map out your exact dates — no pressure, no obligation.</p>
+    <details class="calbox">
+      <summary class="calbtn"><span>📅 See available times</span><span class="cpm">+</span></summary>
+      <div class="calwrap">
+        <iframe src="https://api.leadconnectorhq.com/widget/booking/OZGuFcFjKOGauHzP02lM" style="width:100%;border:none;min-height:680px"></iframe>
+      </div>
+    </details>
+    <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+    <p class="reassure">A real person calls you — not a robocall.</p>
+    <div class="trustchips">
+      <span class="chip">✓ No upfront fees</span>
+      <span class="chip">✓ Free, no obligation</span>
+      <span class="chip">✓ South Carolina focused</span>
+      <span class="chip">✓ We never sell your data</span>
+    </div>
+  </div>
+
+</div></div></section>
+
+<section class="next"><div class="wrap">
+  <h2>What the call actually looks like</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><b>We pull up your timeline</b><p>Using public county records — we&rsquo;ll tell you the real dates that matter for your property.</p></div>
+    <div class="step"><div class="n">2</div><b>We walk through where you stand</b><p>We&rsquo;ll lay out your real situation and the paths from here — whether that&rsquo;s staying in your home or selling on your own terms before the auction.</p></div>
+    <div class="step"><div class="n">3</div><b>You decide, no pressure</b><p>You leave knowing your next step. If we&rsquo;re not the right fit, we&rsquo;ll point you to who is.</p></div>
+  </div>
+</div></section>
+
+<section class="guide"><div class="narrow">
+  <div class="guidehead">
+    <span class="eyebrow">The Full Guide</span>
+    <h2>How the process works, and why waiting is the most expensive thing you can do</h2>
+    <p>South Carolina is a judicial foreclosure state — the lender has to take you to court before they can sell your home. That gives you real rights, but the process is mechanical and unemotional. It does not pause because you&rsquo;re working on a plan, and it moves faster than most people expect. The homeowners who lose the most are the ones who wait.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="tl"><div class="col-n"><div class="bub">1</div><div class="line"></div></div><div class="body"><div class="t">You fall behind <span class="know">Act immediately</span></div><p>The lender starts sending notices. They&rsquo;re easy to set aside — and that&rsquo;s exactly the trap.</p></div></div>
+    <div class="tl"><div class="col-n"><div class="bub">2</div><div class="line"></div></div><div class="body"><div class="t">The lawsuit <span class="know">Faster than you think</span></div><p>The lender files a Lis Pendens, Summons, and Complaint in the County Court of Common Pleas.</p></div></div>
+    <div class="tl"><div class="col-n"><div class="bub">3</div><div class="line"></div></div><div class="body"><div class="t">You must answer <span class="know">Only 30 days</span></div><p>Once you&rsquo;re served, you have a hard, short window to file a written Answer. Miss it and you lose your right to be heard.</p></div></div>
+    <div class="tl"><div class="col-n"><div class="bub">4</div><div class="line"></div></div><div class="body"><div class="t">Loss-mitigation review <span class="know">A short window</span></div><p>Owner-occupants get a short window to be reviewed for options. It does <b>not</b> pause your 30-day answer deadline.</p></div></div>
+    <div class="tl"><div class="col-n"><div class="bub">5</div><div class="line"></div></div><div class="body"><div class="t">The judge <span class="know">Moves quickly</span></div><p>A Master-in-Equity — a judge for these cases — hears it and can enter judgment quickly.</p></div></div>
+    <div class="tl"><div class="col-n"><div class="bub">6</div><div class="line"></div></div><div class="body"><div class="t">Judgment &amp; order of sale <span class="know">~30 days</span></div><p>The court sets the amount owed and orders your home sold.</p></div></div>
+    <div class="tl"><div class="col-n"><div class="bub">7</div><div class="line"></div></div><div class="body"><div class="t">Notice of sale <span class="know">~3 weeks&rsquo; notice</span></div><p>The sale is advertised in the local paper — often only about three weeks out.</p></div></div>
+    <div class="tl"><div class="col-n"><div class="bub">8</div></div><div class="body"><div class="t">The auction <span class="know">Sooner than expected</span></div><p>Your home is sold to the highest bidder at the county courthouse on the first Monday of the month.</p></div></div>
+  </div>
+
+  <div class="warn"><h4>⚖️ There is no second chance after the sale</h4><p>South Carolina follows the <b>&ldquo;hammer rule.&rdquo;</b> The moment the sale is final, your ownership is gone for good — there is no buy-back period. And if the home sells for less than you owe, the lender can come after you for the difference. Acting before the sale is how you avoid both.</p></div>
+
+  <div class="donow"><h4>✅ What to do right now</h4><ul>
+    <li><span class="ck">✓</span> <span><b>Confirm your real sale date</b> with the foreclosing attorney, in writing. Don&rsquo;t rely on what the bank tells you.</span></li>
+    <li><span class="ck">✓</span> <span><b>If you&rsquo;ve been served, answer within 30 days</b> to protect your rights.</span></li>
+    <li><span class="ck">✓</span> <span><b>Talk to someone who does this every day</b> before your options run out.</span></li>
+  </ul></div>
+
+  <div class="midcta"><h3>Want a straight read on where you stand?</h3><p>We&rsquo;ll confirm your real timeline and walk through your situation together — free, no pressure.</p><a href="#calTop" onclick="var d=document.querySelector('.calbox');if(d)d.open=true;">Get my free read →</a></div>
+</div></section>
+
+<section class="faq"><div class="narrow">
+  <h2>Questions people ask first</h2>
+  <details open><summary>Is it too late if there&rsquo;s already a sale date?<span class="pm">+</span></summary><div class="ans">Often there&rsquo;s still time to act right up until the sale — whether that&rsquo;s staying in the home or selling on your own terms — but the choices get fewer and harder the closer you get. That&rsquo;s exactly why confirming your real date matters.</div></details>
+  <details><summary>Will I walk away with any money?<span class="pm">+</span></summary><div class="ans">It depends on your equity. If there&rsquo;s equity in the home, the goal is to get it into your pocket instead of losing it at the auction.</div></details>
+  <details><summary>Does foreclosure ruin my credit forever?<span class="pm">+</span></summary><div class="ans">A foreclosure can stay on your credit report for 7 to 10 years. Resolving it on your own terms is far better for your credit than letting it run all the way to auction.</div></details>
+  <details><summary>Do I have to pay anything to talk to you?<span class="pm">+</span></summary><div class="ans">No. The conversation is free and there&rsquo;s no obligation. We never charge an upfront fee, and we never sell your information.</div></details>
+</div></section>
+
+<section class="trust"><div class="narrow">
+  <div class="why"><b>Why do we offer this for free?</b> Because the families who get honest help early are the ones who keep the most options open. Whether the right move is staying in your home or selling before the auction, we&rsquo;ll help you see it clearly and act while there&rsquo;s still time.</div>
+  <p class="disc">Blue Peak Ventures is a real-estate problem-solving company — not a law firm. South Carolina foreclosure is all we do, and our help is free and honest.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="row">© Blue Peak Ventures · South Carolina foreclosure specialists</div>
+</div></footer>
+</body>
+</html>
